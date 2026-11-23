@@ -1,0 +1,121 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111216">
+<meta name="description" content="王家瑞作品详情：大图、方向、画幅与说明，支持上一件、下一件与相关作品浏览。">
+<title>作品详情｜WJR 王家瑞</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238c7cf2'/%3E%3Cpath d='M12 18h8l5 25 7-19h7l5 19 3-25h7l-7 30h-8l-6-17-7 17h-8z' fill='%23111216'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+<link rel="stylesheet" href="assets/css/kinetic8.css">
+    <link rel="stylesheet" href="assets/css/kinetic9.css">
+<script>try{var t=localStorage.getItem('wjr-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/exhibit.css"></head>
+<body class="page-detail" data-page="detail">
+<a class="skip" href="#workInfo">跳到作品信息</a>
+<div class="page-wipe is-closing" aria-hidden="true"><span class="wipe-mark">WJR</span></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<noscript><style>.page-wipe{display:none}[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript>
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="wordmark" href="index.html" aria-label="返回作品转盘"><span class="mark">W</span><span>WJR / 王家瑞<small>VISUAL DESIGN PORTFOLIO</small></span></a>
+    <nav class="head-nav" aria-label="主导航">
+      <a href="home.html">首页</a>
+      <a href="works.html" aria-current="page">作品目录</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <div class="head-actions">
+      <button class="text-button" id="randomButton" type="button">随机一件</button>
+      <button class="text-button" id="themeToggle" type="button" aria-label="切换浅色模式"><span class="theme-label">浅色</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="detail-top">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="面包屑" data-reveal>
+        <a href="home.html">首页</a><span>/</span><a href="works.html">作品目录</a><span>/</span><span id="crumbTitle">作品详情</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="detail-layout">
+    <div class="detail-stage" data-reveal="fade">
+      <span class="stage-index" id="workIndex">00 / 26</span>
+      <span class="stage-hint" aria-hidden="true">Click to zoom · 点击放大</span>
+      <a class="stage-link" id="workOpen" href="#" target="_blank" rel="noopener" aria-label="在新窗口查看原图" data-cursor="zoom" data-cursor-label="Zoom">
+        <img id="workImage" src="assets/works/ip-nice-board.jpg" alt="作品大图">
+      </a>
+    </div>
+
+    <aside class="detail-info" id="workInfo">
+      <p class="work-cat" id="workCat" data-reveal data-detail-d="80">作品</p>
+      <h1 id="workTitle" data-reveal data-detail-d="140">作品标题</h1>
+      <p class="detail-desc" id="workDesc" data-reveal data-detail-d="200">作品说明</p>
+      <p class="detail-body" id="workBody" data-reveal data-detail-d="260">这张图按原始比例完整显示，海报与页面里的文字、栅格和细节都保留下来。可点击“查看原图”在新窗口放大核对，或继续浏览同方向的其他作品。</p>
+
+      <dl class="detail-dl" data-reveal data-detail-d="320">
+        <div><dt>编号</dt><dd id="metricNo">W-00</dd></div>
+        <div><dt>方向</dt><dd id="metricDir">—</dd></div>
+        <div><dt>画幅比例</dt><dd id="metricRatio">—</dd></div>
+        <div><dt>展示方式</dt><dd>原比例 · 可放大</dd></div>
+      </dl>
+
+      <div class="detail-actions" data-reveal data-detail-d="380">
+        <a class="primary-link" id="openOriginal" href="#" target="_blank" rel="noopener">查看原图<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+        <button class="secondary-link" id="copyWork" type="button">复制作品链接</button>
+        <button class="secondary-link" id="detailRandom" type="button">随机一件</button>
+      </div>
+
+      <div class="detail-nav" data-reveal data-detail-d="440">
+        <a id="prevWork" href="works.html"><small>← Previous</small><span>上一件</span></a>
+        <a id="nextWork" href="works.html" class="next"><small>Next →</small><span>下一件</span></a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related">
+    <div class="wrap">
+      <div class="related-head">
+        <h2 data-reveal>同方向的作品</h2>
+        <a class="secondary-link" href="works.html" data-reveal>返回目录</a>
+      </div>
+      <div class="related-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">WJR</div>
+      <div class="footer-links">
+        <a href="home.html">首页</a>
+        <a href="works.html">作品目录</a>
+        <a href="about.html">关于</a>
+        <button id="footerRandom" type="button">随机一件</button>
+        <a href="#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>VISUAL DESIGN PORTFOLIO / 2024—2026</span><span>26 WORKS · 5 DIRECTIONS</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<svg class="filter-defs" aria-hidden="true" focusable="false">
+  <filter id="plateR" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/></filter>
+  <filter id="plateG" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 1 0 0 0  0 0 0 0 1  0 0 0 1 0"/></filter>
+  <filter id="plateB" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 1 0 0  0 0 0 1 0"/></filter>
+</svg>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/works-data.js"></script>
+<script src="assets/js/depth.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/kinetic8.js"></script>
+    <script src="assets/js/kinetic9.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5f090e6fdcad4c3',t:'MTc5NTQ0MTAyMA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5f090e6fdcad4c3',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

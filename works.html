@@ -1,0 +1,109 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111216">
+<meta name="description" content="王家瑞作品目录：26 件视觉设计作品，按 IP 形象、信息可视化、网页设计、海报设计与其他设计筛选，可搜索并进入单件详情。">
+<title>作品目录｜26 件作品 · WJR 王家瑞</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238c7cf2'/%3E%3Cpath d='M12 18h8l5 25 7-19h7l5 19 3-25h7l-7 30h-8l-6-17-7 17h-8z' fill='%23111216'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+<link rel="stylesheet" href="assets/css/kinetic8.css">
+    <link rel="stylesheet" href="assets/css/kinetic9.css">
+<script>try{var t=localStorage.getItem('wjr-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/exhibit.css"></head>
+<body class="page-works" data-page="works">
+<a class="skip" href="#gallery">跳到作品目录</a>
+<div class="page-wipe is-closing" aria-hidden="true"><span class="wipe-mark">WJR</span></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<noscript><style>.page-wipe{display:none}[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript>
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="wordmark" href="index.html" aria-label="返回作品转盘"><span class="mark">W</span><span>WJR / 王家瑞<small>VISUAL DESIGN PORTFOLIO</small></span></a>
+    <nav class="head-nav" aria-label="主导航">
+      <a href="home.html">首页</a>
+      <a href="works.html" aria-current="page">作品目录</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <div class="head-actions">
+      <button class="text-button" id="randomButton" type="button">随机一件</button>
+      <button class="text-button" id="themeToggle" type="button" aria-label="切换浅色模式"><span class="theme-label">浅色</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>工作档案 / INDEX OF WORKS</p>
+      <h1 data-lines><span class="line-mask"><span style="--d:80ms">作品目录</span></span></h1>
+      <div class="head-meta">
+        <p data-reveal data-d="220">26 件作品按五个方向归档：IP 形象、信息可视化、网页设计、海报设计、其他设计。可以按方向筛选，也可以直接输入作品名或描述。每件作品都有独立的详情页，保留原始比例，不裁掉海报文字与排版细节。</p>
+        <div class="count-facts" data-reveal="fade" data-d="300">
+          <div><strong>26</strong>件作品</div>
+          <div><strong>05</strong>个方向</div>
+          <div><strong>02</strong>年跨度</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="filter-shell" id="filterShell">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div class="filters" role="group" aria-label="按作品方向筛选">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">全部<span>26</span></button>
+        <button class="filter" type="button" data-filter="ip" aria-pressed="false">IP 形象<span>4</span></button>
+        <button class="filter" type="button" data-filter="info" aria-pressed="false">信息可视化<span>4</span></button>
+        <button class="filter" type="button" data-filter="web" aria-pressed="false">网页设计<span>3</span></button>
+        <button class="filter" type="button" data-filter="poster" aria-pressed="false">海报设计<span>7</span></button>
+        <button class="filter" type="button" data-filter="other" aria-pressed="false">其他设计<span>8</span></button>
+      </div>
+      <label class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+        <input class="search-input" id="searchInput" type="search" placeholder="搜索作品或描述" aria-label="搜索作品或描述">
+        <button class="search-clear text-button" id="searchClear" type="button" aria-label="清空搜索" hidden>清除</button>
+      </label>
+    </div>
+  </div>
+
+  <section class="wrap" id="gallerySection">
+    <div class="results-line"><span id="resultsCount" aria-live="polite">显示 26 件作品</span>
+      <div class="results-tools">
+        <span class="results-hint">点击作品进入单独详情页</span>
+        <div class="view-switch" role="group" aria-label="切换浏览方式">
+          <button class="view-btn" type="button" data-view="grid" aria-pressed="true">网格</button>
+          <button class="view-btn" type="button" data-view="list" aria-pressed="false">列表</button>
+        </div>
+      </div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+    <div class="empty-state" id="emptyState" hidden>没有找到匹配的作品。<br><button class="secondary-link" id="resetFilters" type="button">清空筛选与搜索</button></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">WJR</div>
+      <div class="footer-links">
+        <a href="home.html">首页</a>
+        <a href="works.html">作品目录</a>
+        <a href="about.html">关于</a>
+        <button id="footerRandom" type="button">随机一件</button>
+        <a href="#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>VISUAL DESIGN PORTFOLIO / 2024—2026</span><span>26 WORKS · 5 DIRECTIONS</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/works-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/kinetic8.js"></script>
+    <script src="assets/js/kinetic9.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5f090e1aa795099',t:'MTc5NTQ0MTAxOQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5f090e1aa795099',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
